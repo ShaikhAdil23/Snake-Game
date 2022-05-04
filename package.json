@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "name": "snake---blockade-web-game",
+  "version": "1.0.0",
+  "description": "Blockage web game app with full responsiveness",
+  "main": "backend.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon backend.js",
+    "start": "node backend.js" 
+  },
+  "author": "",
+  "license": "ISC"
+}
