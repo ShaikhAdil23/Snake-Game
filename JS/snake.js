@@ -1,5 +1,7 @@
 import { getInputDirection } from "./input.js"
 
+const foodSound = new Audio('../SoundEffect/food.mp3')
+
 export const snakeBody = [{ x: 11, y: 11 }]
 let newSegments = 0
 
@@ -20,17 +22,22 @@ export function update() {
 }
 
 export function draw(gameBoard) {
-    snakeBody.forEach(segment => {
+    snakeBody.forEach((segment, index) => {
         const snakeElement = document.createElement('div')
         snakeElement.style.gridRowStart = segment.y
         snakeElement.style.gridColumnStart = segment.x
-        snakeElement.classList.add('snake')
+        if (index === 0) {
+            snakeElement.classList.add('snakeHead')
+        } else {
+            snakeElement.classList.add('snake')
+        }
         gameBoard.appendChild(snakeElement)
     })
 }
 
 export function expandSnake(amount) {
     newSegments += amount
+    foodSound.play()
 }
 
 export function onSnake(position , { iqnoreHead = false} = {}) {
@@ -60,4 +67,3 @@ function addSegments() {
 
     newSegments = 0
 }
-

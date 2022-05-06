@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
 
 body {
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -30,6 +31,14 @@ body {
     width: 100vmin;
     height: 10vmin;
     font-family: 'Tapestry', cursive;
+}
+
+.snakeHead {
+    background-color: #b55ada;
+    border: .25vmin solid black;
+    box-shadow: 0 0 10px 2px #b55ada;
+    border-top-left-radius: 35%;
+    border-bottom-right-radius: 35%;
 }
 
 .snake {
